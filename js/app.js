@@ -1,6 +1,5 @@
 
 const NFT_ADDRESS = "0x5fB74c1597D43db0b326E27f8acd2270f80eC2e0"; //LOVET (Polygon)
-const metadata_url = "https://ipfs.io/ipfs/QmTwWoTYk18iJBzFwpamyiC4ceR1C8xyH3FFSnuKhNgUs4/";
 
 const camera = document.getElementById("camera");
 const infoContainer = document.getElementById("infoContainer");
@@ -155,7 +154,8 @@ $(window).on("load",function(){
 });
 
 function enter(){
-    if (tokenDataLoad && assetsLoad){
+	//tokenDataLoad && assetsLoad
+    if (true){
         $(".loader-wrapper").fadeOut("slow");
 	    myaudio.play();
 	
