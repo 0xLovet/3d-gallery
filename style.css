@@ -132,3 +132,14 @@ body{
   z-index: 3;
 }
 /**/
+
+.onlyDesktop{
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+
+  .onlyDesktop{
+    display: block;
+  }
+}
