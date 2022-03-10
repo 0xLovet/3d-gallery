@@ -62,16 +62,6 @@ const refresh = async () => {
 
 refresh();
 
-
-/* LINK 
-AFRAME.registerComponent("mylink", {
-    init: function() {
-      this.el.addEventListener("click", (e) => {
-        window.location = this.data.href;
-      })
-    }
-});*/
-
 // CAMERA CONSTRAINTS
 AFRAME.registerComponent('limit-my-distance', {
     init: function() {
@@ -165,7 +155,8 @@ $(window).on("load",function(){
 });
 
 function enter(){
-    if (tokenDataLoad && assetsLoad){
+	//tokenDataLoad && assetsLoad
+    if (true){
         $(".loader-wrapper").fadeOut("slow");
 	myaudio.play();
 	
