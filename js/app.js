@@ -154,11 +154,9 @@ $(window).on("load",function(){
 });
 
 function enter(){
-	//tokenDataLoad && assetsLoad
-    if (true){
+    if (tokenDataLoad && assetsLoad){
         $(".loader-wrapper").fadeOut("slow");
-	    myaudio.play();
-	
+	myaudio.play();
     }
     else{
         textEnter.innerHTML = "WAIT..";
