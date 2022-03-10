@@ -29,11 +29,11 @@ const sleep = (milliseconds) => {
 }
 
 
-
 const refresh = async () => {
     var color="";
+    tokenData = token_data;
     for(let i=1; i<21; i++ ){
-        var tmp = {};
+       /* var tmp = {};
         try{
             json_URL = metadata_url + i + ".json";
             $.getJSON(json_URL, function(data) {
@@ -43,12 +43,12 @@ const refresh = async () => {
             });
         }catch(error){
             console.log(`Error: ${error.message}`);
-        }
+        }*/
 
         await nft_contract.methods.ownerOf(i).call().then( async function (result) {
-            tmp["owner"] = result;            
+            tokenData[i]["owner"] = result;            
         });
-        tokenData[i] = tmp;
+        //tokenData[i] = tmp;
     }
     tokenDataLoad = true;
     loader.src = "images/lovet.svg";
@@ -155,10 +155,9 @@ $(window).on("load",function(){
 });
 
 function enter(){
-	//tokenDataLoad && assetsLoad
-    if (true){
+    if (tokenDataLoad && assetsLoad){
         $(".loader-wrapper").fadeOut("slow");
-	myaudio.play();
+	    myaudio.play();
 	
     }
     else{
