@@ -49,6 +49,7 @@ const refresh = async () => {
         });
         //tokenData[i] = tmp;
     }
+    console.log("load 1 ok");
     tokenDataLoad = true;
     loader.src = "images/lovet.svg";
     textEnter.innerHTML = "ENTER";
@@ -151,6 +152,7 @@ AFRAME.registerComponent('display-info', {
 
 $(window).on("load",function(){
 	assetsLoad = true;
+	console.log("load 2 ok");
 });
 
 function enter(){
