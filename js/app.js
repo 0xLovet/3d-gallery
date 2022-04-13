@@ -43,7 +43,7 @@ const refresh = async () => {
         }catch(error){
             console.log(`Error: ${error.message}`);
         }*/
-
+	console.log(i);
         await nft_contract.methods.ownerOf(i).call().then( async function (result) {
             tokenData[i]["owner"] = result;            
         });
